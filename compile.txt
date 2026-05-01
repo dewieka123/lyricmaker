@@ -1,0 +1,8 @@
+macOS:
+clang -fobjc-arc -framework Cocoa -framework AVFoundation LyricMaker.m -o LyricMakerApp
+
+Linux:
+clang++ -fPIC -O2 lyricmaker.cpp -o LyricMaker $(pkg-config --cflags --libs Qt5Widgets Qt5Multimedia)
+
+Windows (Using MSVC):
+clang++ -O2 lyricmaker.cpp -o LyricMaker.exe $(pkgconf --cflags --libs Qt5Widgets Qt5Multimedia)
